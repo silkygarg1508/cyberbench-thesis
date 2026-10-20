@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+artifacts/
+reports/
+data/CyberBench/
+*.xlsx
+*.xlsm
+.idea/
+.vscode/

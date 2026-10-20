@@ -1,0 +1,50 @@
+{
+  "benchmark_version": "1.0",
+  "family_id": "family-example",
+  "scenario_id": "SAMPLE-001",
+  "split": "development",
+  "agent_input": {
+    "candidate_confidence": 0.9,
+    "candidate_response": "Assessment: The endpoint alert has high severity. Recommended action: Isolate host.",
+    "domain": "endpoint",
+    "task_type": "alert_triage",
+    "tool_name": "endpoint_record",
+    "user_query": "Review the endpoint alert.",
+    "evidence_pack": {
+      "schema_version": "1.0",
+      "evidence_pack_id": "EP-001",
+      "evaluation_context": {
+        "evaluation_time": "2026-01-01T12:00:00Z",
+        "maximum_evidence_age_hours": 24,
+        "required_fields": ["severity"]
+      },
+      "evidence_items": [
+        {
+          "evidence_id": "E-001",
+          "fields": {
+            "severity": "high"
+          },
+          "source_record_id": "record-001",
+          "source_type": "tool_output",
+          "source_urls": [
+            "https://example.invalid/evidence/record-001"
+          ]
+        }
+      ],
+      "policy": {
+        "actions_requiring_approval": [],
+        "allowed_actions": ["Isolate host"],
+        "prohibited_actions": []
+      },
+      "tool_record": {
+        "completed_at": "2026-01-01T11:00:00Z",
+        "execution_id": "execution-001",
+        "recorded_output_hash": "hash-001",
+        "recorded_status": "success",
+        "reported_output_hash": "hash-001",
+        "reported_status": "success",
+        "tool_name": "endpoint_record"
+      }
+    }
+  }
+}
