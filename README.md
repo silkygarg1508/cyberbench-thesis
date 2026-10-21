@@ -17,7 +17,10 @@ calculation.
 ## Excluded
 
 The public package does not contain credentials, local paths, experimental artefacts,
-private datasets or generated review files.
+generated review files or the dataset archive itself. The exact CyberBench version 1
+dataset used in the thesis is distributed separately:
+
+- [Download CyberBench v1 dataset (ZIP)](https://drive.google.com/file/d/1L-xx62YGJcR-bEOlFTeArdyV68KF8ehr/view?usp=sharing)
 
 ## Requirements
 
@@ -46,7 +49,7 @@ cyberbench-verifier verify-case examples\sample_case.json
 
 ## Validate a local CyberBench directory
 
-The dataset is not included. Set its local path before running:
+Download and extract the linked dataset archive, then set its local path before running:
 
 ```powershell
 $env:CYBERBENCH_DATA_DIR = "C:\path\to\CyberBench_v1"
